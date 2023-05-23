@@ -1,0 +1,12 @@
+defaults:
+  - action_dashboard: default
+  - objective_dashboard: default
+  - observation_dashboard: default
+
+_target_: rcognita.visualization.animator.Animator
+
+scenario: ~ scenario
+fps: ${system_specific.fps}
+max_video_length: 60
+animation_max_size_mb: 200
+system_visualization_dashboard: ~ system_specific.system_visualization_dashboard

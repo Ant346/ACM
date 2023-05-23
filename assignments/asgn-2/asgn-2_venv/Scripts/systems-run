@@ -1,0 +1,4 @@
+#!c:\Users\serge\Desktop\classedu2023-advctrl\assignments\asgn-2\asgn-2_venv\Scripts\python.exe
+
+import systems.parse
+systems.parse.main()

@@ -1,0 +1,4 @@
+#!C:\Users\serge\Desktop\classedu2023-advctrl\assignments\asgn-3\asgn_3_venv\Scripts\python.exe
+
+import systems.viz
+systems.viz.main()

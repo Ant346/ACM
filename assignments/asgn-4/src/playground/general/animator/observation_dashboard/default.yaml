@@ -1,0 +1,8 @@
+_target_: rcognita.visualization.dashboards.DefaultDashboardActionOrObservation
+
+time_start: $ simulator.time_start
+time_final: $ simulator.time_final
+datum_init: $ scenario.state_init
+scenario : ~ scenario
+datum_namings: $ observation_naming.observation
+dashboard_type: observation

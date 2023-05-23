@@ -1,0 +1,5 @@
+_target_: rcognita.visualization.dashboards.DefaultDashboardObjectives
+
+time_start: $ simulator.time_start
+time_final: $ simulator.time_final
+scenario : ~ scenario 

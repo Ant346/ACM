@@ -1,0 +1,41 @@
+# _target_: rcognita.controllers.Controller3WRobotNIMotionPrimitive
+
+# ###---Constructor arguments---###
+
+# K: 3
+# time_start: $ simulator.time_start
+# sampling_time: 1.0E-2
+# action_bounds: $ system.action_bounds%%
+
+###############################################
+
+_target_: rcognita.controllers.Controller3WRobotClfSemiconcave
+
+###---Constructor arguments---###
+
+action_bounds: $ system.action_bounds%%
+time_start: 0
+sampling_time: $ system_specific.sampling_time
+disassemble_clf: false
+
+optimizer: 
+  _target_: rcognita.optimizers.SciPyOptimizer
+  opt_options:
+    maxiter: 300
+    maxfev: 5000
+    disp: false
+    adaptive: true
+    xatol: 1.0E-7
+    fatol: 1.0E-7
+  opt_method: SLSQP
+
+predictor:
+  _target_: rcognita.predictors.EulerPredictor
+
+  ###---Constructor arguments---###
+
+  pred_step_size: ${controller.sampling_time}
+  system: $ simulator.system
+  dim_input: 2
+  prediction_horizon: 1
+

@@ -1,0 +1,6 @@
+state_init: = numpy.array([${.x0}, ${.x0}, ${.angle0}])
+action_init: = numpy.ones(${system.dim_input})
+
+x0: 5.
+y0: 5.
+angle0: = 3. * numpy.pi / 4.
